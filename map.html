@@ -45,7 +45,7 @@
       
               const template = {
                 title: "Branch Info",
-                content: "ADI Branch {Address}, {City}."
+                content: "ADI Branch Address: {Address}, {City}, {State}, {Zip}\nDC: {DC}"
               };
       
               const csvLayer = new CSVLayer({
@@ -74,11 +74,9 @@
                   }]
                 }
               };
-      
-              const map = new WebScene({
-                portalItem: {
-                  id: "a467ef1140de4e88acf34d38df9fb869"
-                }
+              
+              const map = new Map({
+                    basemap: "arcgis-topographic" // Basemap layer
               });
       
               map.add(csvLayer);

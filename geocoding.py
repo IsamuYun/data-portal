@@ -34,7 +34,7 @@ def get_branch_geometry(branch_list):
         full_address = get_full_address(branch)
         location = get_geo_code(full_address)
         if location:
-            branch["Lantitude"] = location["Lantitude"]
+            branch["Latitude"] = location["Latitude"]
             branch["Longitude"] = location["Longitude"]
 
 def get_full_address(branch):
